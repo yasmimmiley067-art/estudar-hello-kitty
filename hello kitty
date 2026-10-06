@@ -1,0 +1,279 @@
+import React from 'react';
+import {
+  SafeAreaView,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        
+        {/* Cabeçalho */}
+        <View style={styles.header}>
+          <View>
+            <Text style={styles.smallText}>Olá, estudante! 🎀</Text>
+            <Text style={styles.title}>Hora de estudar!</Text>
+          </View>
+
+          <View style={styles.bow}>
+            <Text style={styles.bowText}>🎀</Text>
+          </View>
+        </View>
+
+        {/* Cartão principal */}
+        <View style={styles.welcomeCard}>
+          <Text style={styles.hello}>♡ Hello! ♡</Text>
+
+          <Text style={styles.cardTitle}>
+            Vamos aprender juntos?
+          </Text>
+
+          <Text style={styles.cardText}>
+            Organize seus estudos de um jeitinho fácil e divertido! 🌸
+          </Text>
+
+          <TouchableOpacity style={styles.startButton}>
+            <Text style={styles.startText}>Começar a estudar →</Text>
+          </TouchableOpacity>
+        </View>
+
+        {/* Título */}
+        <Text style={styles.sectionTitle}>O que você quer fazer?</Text>
+
+        {/* Opções */}
+        <View style={styles.options}>
+
+          <TouchableOpacity style={styles.option}>
+            <View style={[styles.icon, { backgroundColor: '#ffd6e7' }]}>
+              <Text style={styles.iconText}>📚</Text>
+            </View>
+
+            <Text style={styles.optionTitle}>Estudar</Text>
+            <Text style={styles.optionText}>
+              Revise suas matérias
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.option}>
+            <View style={[styles.icon, { backgroundColor: '#ffe6b8' }]}>
+              <Text style={styles.iconText}>📝</Text>
+            </View>
+
+            <Text style={styles.optionTitle}>Tarefas</Text>
+            <Text style={styles.optionText}>
+              Veja suas atividades
+            </Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity style={styles.option}>
+            <View style={[styles.icon, { backgroundColor: '#e8d8ff' }]}>
+              <Text style={styles.iconText}>⭐</Text>
+            </View>
+
+            <Text style={styles.optionTitle}>Notas</Text>
+            <Text style={styles.optionText}>
+              Acompanhe seu desempenho
+            </Text>
+          </TouchableOpacity>
+
+        </View>
+
+        {/* Frase */}
+        <View style={styles.quote}>
+          <Text style={styles.quoteText}>
+            "Você consegue! ♡"
+          </Text>
+
+          <Text style={styles.quoteSubtext}>
+            Um pouquinho todos os dias faz a diferença.
+          </Text>
+        </View>
+
+        <Text style={styles.footer}>
+          Feito com ♡ para estudar
+        </Text>
+
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff7fb',
+  },
+
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 24,
+    paddingTop: 25,
+    paddingBottom: 20,
+  },
+
+  smallText: {
+    fontSize: 14,
+    color: '#a66b7a',
+    marginBottom: 4,
+  },
+
+  title: {
+    fontSize: 27,
+    fontWeight: 'bold',
+    color: '#4a2733',
+  },
+
+  bow: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: '#ffd1e2',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  bowText: {
+    fontSize: 30,
+  },
+
+  welcomeCard: {
+    marginHorizontal: 20,
+    backgroundColor: '#ffb6d0',
+    borderRadius: 25,
+    padding: 24,
+    marginBottom: 28,
+  },
+
+  hello: {
+    fontSize: 17,
+    fontWeight: 'bold',
+    color: '#9b3158',
+    marginBottom: 10,
+  },
+
+  cardTitle: {
+    fontSize: 23,
+    fontWeight: 'bold',
+    color: '#4a2733',
+    marginBottom: 8,
+  },
+
+  cardText: {
+    fontSize: 14,
+    lineHeight: 21,
+    color: '#704454',
+    marginBottom: 20,
+  },
+
+  startButton: {
+    backgroundColor: '#fff',
+    paddingVertical: 13,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    alignSelf: 'flex-start',
+  },
+
+  startText: {
+    color: '#d94d7b',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#4a2733',
+    marginHorizontal: 24,
+    marginBottom: 15,
+  },
+
+  options: {
+    paddingHorizontal: 20,
+  },
+
+  option: {
+    backgroundColor: '#fff',
+    borderRadius: 20,
+    padding: 16,
+    marginBottom: 12,
+    flexDirection: 'row',
+    alignItems: 'center',
+
+    shadowColor: '#d48da7',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+
+    elevation: 2,
+  },
+
+  icon: {
+    width: 52,
+    height: 52,
+    borderRadius: 17,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 14,
+  },
+
+  iconText: {
+    fontSize: 25,
+  },
+
+  optionTitle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#4a2733',
+    position: 'absolute',
+    left: 82,
+    top: 13,
+  },
+
+  optionText: {
+    fontSize: 12,
+    color: '#9a7a85',
+    position: 'absolute',
+    left: 82,
+    top: 36,
+  },
+
+  quote: {
+    marginHorizontal: 20,
+    marginTop: 18,
+    backgroundColor: '#fff0f6',
+    borderRadius: 20,
+    padding: 20,
+    alignItems: 'center',
+  },
+
+  quoteText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#d94d7b',
+    marginBottom: 5,
+  },
+
+  quoteSubtext: {
+    fontSize: 12,
+    color: '#9a6b7a',
+    textAlign: 'center',
+  },
+
+  footer: {
+    textAlign: 'center',
+    color: '#c28a9c',
+    fontSize: 12,
+    marginTop: 20,
+    marginBottom: 25,
+  },
+});
